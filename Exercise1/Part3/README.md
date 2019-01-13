@@ -23,11 +23,15 @@ When answering the questions, remember to use all the resources at your disposal
  > I would claim that it does make it easier, but at the same time also somewhat harder, there are some caveats which the programmers need to consider when creating concurrent programs, but overall it can make for some what easier and more sensible ways of designing the program. ### Might need to fill inn some more.
  
  ### What are the differences between processes, threads, green threads, and coroutines?
- >  - A process is a OS managed instance of a program, the program runs concurrent
-    - Thread is a part of a running instance which can be executed, the os changes between the different threads in the program which causes it to seem like the program code
-    - Green Thread are user created threads
-    - Coroutines are similar to subroutines in that they usually implements a part of a complex computiation into smaller helper functions/parts, however where subroutines usually are called and managed from a main function, coroutines calls other coroutines, which in turns forwards the call to other functions/coroutines, in this sense the coroutines forms a "pipeline" which can change dependant on the data recieved and potential variables/flags that are set.  
-  Good answers at: https://stackoverflow.com/questions/3324643/processes-threads-green-threads-protothreads-fibers-coroutines-whats-the and https://www.cse.unsw.edu.au/~cs9242/17/lectures/02-threadsevents.pdf, for coroutines: http://wla.berkeley.edu/~cs61a/fa11/lectures/streams.html
+ **Process**: A process is a OS managed instance of a program, the program runs concurrent.
+ 
+ **Thread**: - Thread are part of a running process, in which different functions/code can be which can be executed sequentially or concurrent. The different threads can executed different tasks, the OS is responsible for changing between the different threads in the program.
+ 
+ **Green Thread**: - Green Thread are similiar to Green Thread, however these are usually managed by libraries or VM, not directly by the OS.
+ 
+ **Coroutines**: - Coroutines are similar to subroutines in that they usually implements a part of a complex computiation into smaller helper functions/parts, however where subroutines usually are called and managed from a main function, coroutines calls other coroutines, which in turns forwards the call to other functions/coroutines, in this sense the coroutines forms a "pipeline" which can change dependant on the data recieved and potential variables/flags that are set.  
+ 
+ Sources and Good answers found at: https://stackoverflow.com/questions/3324643/processes-threads-green-threads-protothreads-fibers-coroutines-whats-the and https://www.cse.unsw.edu.au/~cs9242/17/lectures/02-threadsevents.pdf, for coroutines: http://wla.berkeley.edu/~cs61a/fa11/lectures/streams.html
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
  > The functions creates a thread.
  
