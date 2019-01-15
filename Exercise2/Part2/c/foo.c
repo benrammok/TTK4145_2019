@@ -1,7 +1,7 @@
 #include <pthread.h>
 #include <stdio.h>
 
-//To limit access to a resource a mutex should be used
+//To limit access to a resource a mutex should be used, however a semaphore could also be used
 pthread_mutex_t count_mutex;
 
 int i = 0;

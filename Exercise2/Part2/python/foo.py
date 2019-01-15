@@ -13,7 +13,7 @@ i = 0
 
 def incrementingFunction(lock):
     with lock:
-	global i
+    global i
     	for j in range(0, 1000000):
 		i = i + 1
 

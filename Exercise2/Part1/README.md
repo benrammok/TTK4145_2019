@@ -16,10 +16,14 @@
 > A critical section is a designation used on parts of the code where access to shared variables occure, the section should not be interruptable. An example is if two threads is accessing a common variable, if both threads are writing to it at the "same" time, the result might vary, dependant on how context switching is done.
 
 ### What is the difference between race conditions and data races?
- > A race condition occurs when multiple threads operate on the same ressource 
+ > A race condition is a result of ordering or timing issues, which will affect the overall corectness of a program, there are multiple reasons why this can happen, context switching, OS operations or memory access, just to mention some, can lead to a race condition. A data race is a fault which occurs when two or more tasks/threads "interact" with a shared memory location, the result of the interaction can be unreliable and it will be dependet on the sequence or timing of the access - BW Ch 6. p 143 also a good source: https://docs.oracle.com/cd/E19205-01/820-0619/geojs/index.html
 
 ### List some advantages of using message passing over lock-based synchronization primitives.
-> *Your answer here*
+> Does not need synchronisation. Usually eaiser to scale to larger systems. Portable.
+
+>Good source: https://pdfs.semanticscholar.org/4cf9/d3a664698d93390da18f2e58ff6dbd58fc4b.pdf
 
 ### List some advantages of using lock-based synchronization primitives over message passing.
-> *Your answer here*
+> Message passing usually needs some more work to get the same functionallity that a similar program utilizing shared variables.
+
+>Good source: https://pdfs.semanticscholar.org/4cf9/d3a664698d93390da18f2e58ff6dbd58fc4b.pdf
